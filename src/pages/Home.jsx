@@ -1,20 +1,22 @@
 import React from "react";
+import { Link} from "react-router-dom";
+
 function Home() {
   return (
-    <>
-      <div className="app-container">
-        <div className="home-container">
-          <section className="section-btn">
-            <div className="create-btn">
-              <button className="card-btn btn"> Create Card</button>
-            </div>
-            <div className="dashbord-btn">
-              <button className="card-btn btn"> Go to dashboard</button>
-            </div>
-          </section>
+    <div className="home-container">
+      <section className="section-btn">
+        <div className="create-btn">
+          <Link to="/home/user/create">
+            <button className="card-btn btn"> Create Card</button>
+          </Link>
         </div>
-      </div>
-    </>
+        <div className="dashbord-btn">
+          <Link to="/home/user/create/dashboard">
+            <button className="card-btn btn"> Go to dashboard</button>
+          </Link>
+        </div>
+      </section>
+    </div>
   );
 }
 
